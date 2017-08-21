@@ -1,0 +1,10 @@
+<div class="questionDiv">
+<div>{{question.questionText}}</div>
+<ul>
+  <div class="allTheStuff"><li class="question" *ngFor = "let choice of question.choices; let index = index">
+    <div class="answers"><button class="btn btn-primary" (click)="answer(index)">
+      {{getLetter(index)}}: {{choice}}
+    </button></div>
+  </li></div>
+</ul>
+</div>
